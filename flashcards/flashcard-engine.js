@@ -1079,7 +1079,7 @@ function showResults() {
 
     // Make sure other buttons are visible
     const startOverBtn = document.querySelector('button[onclick="startOver()"]');
-    const doneBtn = document.querySelector('a[href="../index.html"]');
+    const doneBtn = document.getElementById('done-btn');
     if (startOverBtn) startOverBtn.style.display = 'inline-block';
     if (doneBtn) doneBtn.style.display = 'inline-block';
 }

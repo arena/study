@@ -281,7 +281,7 @@ class QuizEngine {
                 <h3>Error Loading Quiz</h3>
                 <p>Could not load quiz data from: ${this.dataFile}</p>
                 <p>Please check that the file exists and is properly formatted.</p>
-                <a href="index.html" style="color: #3b82f6;">← Back to Home</a>
+                <a href="course.html" style="color: #3b82f6;">← Back to Home</a>
             </div>
         `;
     }

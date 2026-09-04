@@ -3,242 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anatomy & Physiology II</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>A study engine for memorization-heavy subjects</title>
+    <meta name="description" content="An open study engine for memorization-heavy subjects. One question bank, three ways to drill it: flashcards, mini-quizzes, and full practice exams.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/showcase.css">
 </head>
 <body>
-    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <span class="toggle-icon">🌙</span>
-    </button>
-    <div class="container">
-        <h1>Anatomy & Physiology II</h1>
 
-        <h3 id="up-next-heading" class="up-next-heading" style="display: none;">Up Next:</h3>
+<button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+    <span class="toggle-icon">🌙</span>
+</button>
 
-        <div id="sections-container">
+<!-- ===================== Hero ===================== -->
+<header class="hero">
+    <div class="wrap">
+        <span class="eyebrow">Open study</span>
+        <h1>One question bank.<br><strong>Three ways to drill it.</strong></h1>
+        <p class="lede">
+            Anatomy, botany, mineralogy, kanji &mdash; anything you learn by naming things over
+            and over. Write your questions once in plain YAML and the same material becomes
+            flashcards, quick quizzes, and full practice exams.
+        </p>
+        <div class="cta-row">
+            <a href="#demo" class="btn btn-primary">See it working</a>
+            <a href="course.html" class="btn">Browse a real course</a>
+        </div>
+    </div>
+</header>
 
-        <section class="course-section" id="practical-1" data-order="1">
-            <div class="section-header">
-                <input type="checkbox" id="checkbox-practical-1" class="section-checkbox">
-                <h2><label for="checkbox-practical-1">Practical #1: Endocrine, Lymphatic, and Immune Systems</label></h2>
-            </div>
-            <div class="links">
-                <!-- <a href="exam1-practice.html" class="link">Exam 1 Practice Test (am)</a>
-                <a href="exam1-practice-key.html" class="link">Exam 1 Practice Test (pm)</a> -->
-                <a href="practical-template.html?unit=unit1-practical" class="link">📝🧞‍♀️ Practice Practical #1</a>
+<hr class="rule">
 
-            </div>
-        </section>
-
-        <section class="course-section" id="practical-2" data-order="2">
-            <div class="section-header">
-                <input type="checkbox" id="checkbox-practical-2" class="section-checkbox">
-                <h2><label for="checkbox-practical-2">Practical #2: The Blood and The Heart</label></h2>
-            </div>
-            <div class="links">
-                <a href="practical-template.html?unit=unit2-practical" class="link">📋🩸🫀 Practice Practical #2</a>
-                <a href="flashcard-hub-template.html?config=decks-config&source=unit2-practical&title=Unit%202%20Flashcards&subtitle=Blood%2C%20Heart%2C%20%26%20Circulatory%20System%20Study%20Decks" class="link">🫀🩸 Flashcards</a>
-            </div>
-        </section>
-
-        <section class="course-section" id="exam-2" data-order="3">
-            <div class="section-header">
-                <input type="checkbox" id="checkbox-exam-2" class="section-checkbox">
-                <h2><label for="checkbox-exam-2">Exam #2: Blood, Heart, & Blood Vessels Lecture Exam</label></h2>
-            </div>
-            <div class="links">
-                <a href="exam-template.html?exam=unit2-exam" class="link">🩸🫀⭕️📝 Exam 2 Practice Test  </a>
-                <a href="flashcard-hub-template.html?config=lecture-decks-config&source=unit2-lecture-topics&title=Unit%202%20Lecture%20Flashcards&subtitle=Lecture%20Topics%20Study%20Decks" class="link">📚 Lecture Flashcards</a>
-            </div>
-        </section>
-
-        <section class="course-section" id="practical-3" data-order="4">
-            <div class="section-header">
-                <input type="checkbox" id="checkbox-practical-3" class="section-checkbox">
-                <h2><label for="checkbox-practical-3">Practical #3: Blood Vessels</label></h2>
-            </div>
-            <div class="links">
-                <a href="practical-template.html?unit=unit2-part2-practical" class="link">📋⭕️ Practice Practical #3 </a>
-                <a href="mini-quiz-builder.html" class="link">📝 Mini-Quiz</a>
-                <a href="pathway-mini-quiz.html" class="link">❤️➡️🦶 Artery & Vein Pathway Quiz</a>
-                <a href="flashcard-hub-template.html?config=practical-3-decks-config&source=unit2-part2-practical&title=Practical%203%20Flashcards&subtitle=Blood%20Vessels%20Study%20Decks" class="link">⭕️ Flashcards</a>
-
-            </div>
-        </section>
-
-        <section class="course-section" id="exam-3" data-order="5">
-            <div class="section-header">
-                <input type="checkbox" id="checkbox-exam-3" class="section-checkbox">
-                <h2><label for="checkbox-exam-3">Respiratory, Renal, and Acid/Base</label></h2>
-            </div>
-            <div class="links">
-                <a href="exam-template.html?exam=unit3-exam3" class="link">📝 Exam 3 Practice Test</a>
-                <a href="practical-template.html?unit=unit3-practical4" class="link">📋🫁 Practice Practical #4</a>
-                <a href="mini-quiz-hub.html?config=unit3-mini-quiz-config&unit=unit3-practical4" class="link">📝 Mini Quizzes</a>
-                <a href="flashcard-hub-template.html?config=unit3-decks-config&source=unit3-practical4&title=Unit%203%20Flashcards&subtitle=Respiratory%2C%20Renal%2C%20and%20Acid%2FBase%20Study%20Decks" class="link">🫁 Flashcards</a>
-            </div>
-        </section>
-
-        <section class="course-section" id="exam-4" data-order="6">
-            <div class="section-header">
-                <input type="checkbox" id="checkbox-exam-4" class="section-checkbox">
-                <h2><label for="checkbox-exam-4">Digestive and Reproductive</label></h2>
-            </div>
-            <div class="links">
-                <a href="exam-template.html?exam=unit4-lecture-digestive-exam" class="link">🍎📝 Exam 4 Practice - Digestive</a>
-                <a href="exam-template.html?exam=unit4-lecture-repro-exam" class="link">🧬📝 Exam 4 Practice - Reproduction</a>
-                <a href="exam-template.html?exam=unit4-lecture-practice-exam" class="link">📝 Exam 4 Practice (Canvas)</a>
-                
-                <a href="practical-template.html?unit=unit4-practical5" class="link">🦷🌮 Practice Practical #5</a>
-                <a href="mini-quiz-builder.html?unit=unit4-practical5&tags=digestive,reproductive&count=10" class="link">🔟 Mini-Practical</a>
-                <a href="flashcard-hub-template.html?config=unit4-decks-config&source=unit4-practical5&title=Unit%204%20Flashcards&subtitle=Digestive%2C%20Reproductive%2C%20and%20Fetal%20Development%20Study%20Decks" class="link">🍆🔬 Lab Flashcards</a>
-            </div>
-        </section>
-
+<!-- ===================== Live demo ===================== -->
+<section id="demo">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>Different ways to study</h2>
+            <p>
+                Study in short bursts, or sit down and simulate a full-length exam.
+                All three are running on the same question bank &mdash; try them.
+            </p>
         </div>
 
+        <!-- Hand-drawn branch: one bank splitting into three modes.
+             Inlined (not <img>) so currentColor follows the theme. -->
+        <div class="branch" aria-hidden="true">
+            <svg viewBox="0 0 971 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M462.848 -0.994112C463.949 -1.07811 464.91 -0.253561 464.994 0.847685C469.242 56.5463 466.82 141.187 466.527 171.143L475.814 161.857C476.595 161.077 477.862 161.076 478.643 161.857C479.424 162.638 479.424 163.905 478.643 164.687L465.914 177.414C465.133 178.195 463.867 178.195 463.086 177.414L450.357 164.687C449.577 163.905 449.576 162.638 450.357 161.857C451.138 161.076 452.406 161.076 453.187 161.857L462.528 171.199C462.817 141.143 465.244 56.7214 461.006 1.15237C460.922 0.0510845 461.746 -0.909984 462.848 -0.994112Z" fill="currentColor"/>
+                <path d="M460.675 59C460.675 43.7931 460.756 29.9956 460.837 19.584C460.919 9.15654 460.999 2.15703 460.999 0.5C460.999 -0.604427 461.895 -1.49977 462.999 -1.5C464.104 -1.5 464.999 -0.60457 464.999 0.5C464.999 2.17626 464.918 9.22645 464.837 19.6152C464.756 30.0203 464.675 43.8069 464.675 59C464.675 72.7033 459.391 83.7627 450.082 92.5225C440.833 101.227 427.669 107.611 411.912 112.227C380.406 121.455 337.88 123.792 293.545 122.856C249.168 121.92 202.787 117.699 163.497 113.718C124.111 109.727 92.0331 106 76.0002 106C60.1425 106 49.3305 110.411 41.9358 116.916C34.5129 123.445 30.3308 132.262 28.0852 141.414C24.5686 155.746 25.8675 170.228 26.634 177.573L36.3498 167.857C37.1309 167.077 38.397 167.077 39.178 167.857C39.959 168.638 39.959 169.905 39.178 170.687L26.4504 183.414C25.6694 184.195 24.4024 184.195 23.6213 183.414L10.8938 170.687C10.1128 169.906 10.1129 168.639 10.8938 167.858C11.6748 167.077 12.9409 167.077 13.7219 167.858L22.4973 176.632C21.7331 168.932 20.7807 154.398 24.2004 140.461C26.5708 130.801 31.0677 121.148 39.2942 113.912C47.5489 106.651 59.3582 102 76.0002 102C92.301 102 124.724 105.767 163.901 109.737C203.175 113.717 249.422 117.925 293.629 118.857C337.88 119.791 379.897 117.437 410.788 108.389C426.23 103.866 438.728 97.7147 447.341 89.6094C455.895 81.5593 460.675 71.5346 460.675 59Z" fill="currentColor"/>
+                <path d="M468 59C468 43.7367 467.247 29.894 466.495 19.4561C466.119 14.237 465.743 9.86679 465.462 6.60059C465.174 3.26302 465 1.22089 465 0.5C465 -0.60457 464.104 -1.5 463 -1.5C461.895 -1.4998 461 -0.604447 461 0.5C461 1.44577 461.201 3.74973 461.476 6.94336C461.757 10.2083 462.132 14.5551 462.505 19.7441C463.253 30.1228 464 43.8635 464 59C464 68.9231 466.904 78.1895 473.597 86.4473C480.262 94.6699 490.588 101.777 505.248 107.608C534.525 119.253 581.588 126 653 126C724.932 126 778.746 124.404 819.235 123.105C859.777 121.806 886.822 120.812 905.373 121.996C916.842 122.728 924.955 125.674 930.721 129.833C936.477 133.985 940.044 139.454 942.247 145.497C946.045 155.916 945.739 167.76 945.561 177.229L936.188 167.857C935.407 167.077 934.141 167.077 933.36 167.857C932.579 168.638 932.579 169.905 933.36 170.687L946.087 183.414C946.869 184.195 948.136 184.195 948.917 183.414L961.644 170.687C962.425 169.905 962.425 168.638 961.644 167.857C960.863 167.077 959.597 167.077 958.816 167.857L949.568 177.104C949.755 167.746 950.032 155.174 946.005 144.128C943.583 137.484 939.586 131.296 933.061 126.589C926.546 121.889 917.658 118.772 905.628 118.004C886.831 116.804 859.527 117.811 819.106 119.107C778.633 120.405 724.869 122 653 122C581.711 122 535.274 115.247 506.726 103.892C492.474 98.2227 482.806 91.4549 476.705 83.9277C470.632 76.4356 468 68.0767 468 59Z" fill="currentColor"/>
+            </svg>
+        </div>
+
+        <div class="mode-grid">
+
+            <!-- ---------- Flashcards ---------- -->
+            <article class="mode-card">
+                <div class="mode-icon" aria-hidden="true">
+                    <svg viewBox="0 0 265 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.36062" y="43.9197" width="152" height="253" rx="23" transform="rotate(-11.5748 2.36062 43.9197)" fill="white" stroke="black" stroke-width="4"/>
+                        <rect x="50.2987" y="18.0614" width="152" height="253" rx="23" transform="rotate(-0.0794366 50.2987 18.0614)" fill="white" stroke="black" stroke-width="4"/>
+                        <rect x="114.431" y="2.39856" width="152" height="253" rx="23" transform="rotate(12.9968 114.431 2.39856)" fill="white" stroke="black" stroke-width="4"/>
+                    </svg>
+                </div>
+                <h3>Flashcards</h3>
+                <p class="claim">The shortest burst. Recognition and recall, swipeable on a phone &mdash; it works in the ten minutes before lab.</p>
+
+                <div class="stage">
+                    <p class="card-prompt" id="fc-prompt">What is the red vessel?</p>
+                    <div class="flip-frame" id="fc-frame" role="button" tabindex="0" aria-label="Flip flashcard">
+                        <div class="flip-inner">
+                            <div class="flip-face flip-front">
+                                <img id="fc-img" src="images/practical-2-2/03.jpg" alt="Blood vessel identification">
+                            </div>
+                            <div class="flip-face flip-back">
+                                <div>
+                                    <div class="answer" id="fc-answer">right axillary artery</div>
+                                    <div class="definition" id="fc-def"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="demo-hint">Click the card to flip &middot; <a href="#" id="fc-next" style="color:inherit">next card</a></p>
+                </div>
+
+                <a class="mode-link" href="flashcards/flashcard-template.html?source=practical-2-2&tags=blood-vessels&title=Blood%20Vessels">Open the full deck &rarr;</a>
+            </article>
+
+            <!-- ---------- Mini quiz ---------- -->
+            <article class="mode-card">
+                <div class="mode-icon" aria-hidden="true">
+                    <svg viewBox="0 0 242 243" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="238" height="239" rx="23" fill="white" stroke="black" stroke-width="4"/>
+                        <circle cx="45.5" cy="33.5" r="5.5" fill="black"/>
+                        <circle cx="45.5" cy="74.5" r="5.5" fill="black"/>
+                        <circle cx="45.5" cy="118.5" r="5.5" fill="black"/>
+                        <circle cx="45.5" cy="162.5" r="5.5" fill="black"/>
+                        <path d="M71.5 28C72.6667 30.5 75.6 35.8 78 37C81 38.5 80 28 85 28C90 28 91.5 37 93.5 37C95.5 37 107 28 111 28C115 28 113 37 118.5 37C124 37 128 28 132.5 28C137 28 139 37 144 37C149 37 154 28 158.5 28C163 28 165.5 37 168.5 37C171.5 37 180.5 29.5 185.5 31" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M71.5 68C72.6667 70.5 75.6 75.8 78 77C81 78.5 80 68 85 68C90 68 91.5 77 93.5 77C95.5 77 107 68 111 68C115 68 113 77 118.5 77C124 77 128 68 132.5 68C137 68 139 77 144 77C149 77 154 68 158.5 68C163 68 165.5 77 168.5 77C171.5 77 180.5 69.5 185.5 71" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M71.5 114C72.6667 116.5 75.6 121.8 78 123C81 124.5 80 114 85 114C90 114 91.5 123 93.5 123C95.5 123 107 114 111 114C115 114 113 123 118.5 123C124 123 128 114 132.5 114C137 114 139 123 144 123C149 123 154 114 158.5 114C163 114 165.5 123 168.5 123C171.5 123 180.5 115.5 185.5 117" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M71.5 160C72.6667 162.5 75.6 167.8 78 169C81 170.5 80 160 85 160C90 160 91.5 169 93.5 169C95.5 169 107 160 111 160C115 160 113 169 118.5 169C124 169 128 160 132.5 160C137 160 139 169 144 169C149 169 154 160 158.5 160C163 160 165.5 169 168.5 169C171.5 169 180.5 161.5 185.5 163" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="121.5" cy="211.5" r="23.5" fill="black"/>
+                        <path d="M111 214.887L117.492 221L133 203" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Mini-quiz</h3>
+                <p class="claim">A few minutes more. Type the answer instead of picking one, scoped by tag to whatever you're weakest on.</p>
+
+                <div class="stage">
+                    <img class="quiz-img" src="images/practical-2-2/05.jpg" alt="Identify the highlighted vessel">
+                    <p class="card-prompt" style="min-height:0;margin-bottom:10px">What is the red vessel?</p>
+                    <div class="answer-row">
+                        <input type="text" id="quiz-input" placeholder="Type your answer&hellip;" autocomplete="off" spellcheck="false">
+                        <button id="quiz-check">Check</button>
+                    </div>
+                    <div class="verdict" id="quiz-verdict"></div>
+                </div>
+
+                <a class="mode-link" href="mini-quiz-builder.html?unit=unit2-part2-practical&tags=blood-vessels&count=10">Build a quiz &rarr;</a>
+            </article>
+
+            <!-- ---------- Practice exam ---------- -->
+            <article class="mode-card">
+                <h3>Practice exam</h3>
+                <p class="claim">The full sit-down. Multiple choice, true/make-true, tables, and self-graded essays, all in one go.</p>
+
+                <div class="stage">
+                    <p class="mc-question">Which statement accurately describes fibrinogen?</p>
+                    <div class="mc-options" id="mc-options">
+                        <button class="mc-option" data-i="0">It is an active protein used immediately in gas&nbsp;exchange.</button>
+                        <button class="mc-option" data-i="1">It is an inactive precursor protein that is involved in the clotting&nbsp;process.</button>
+                        <button class="mc-option" data-i="2">It is an immunoglobulin that provides immunity against foreign&nbsp;antigens.</button>
+                        <button class="mc-option" data-i="3">It is a transport protein primarily responsible for moving hydrophobic&nbsp;hormones.</button>
+                    </div>
+                    <p class="demo-hint" id="mc-hint">Pick an answer</p>
+                </div>
+
+                <a class="mode-link" href="exam-template.html?exam=unit2-exam">Take the practice exam &rarr;</a>
+            </article>
+
+        </div>
     </div>
+</section>
 
-    <script>
-        // Dark mode functionality
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const toggleIcon = document.querySelector('.toggle-icon');
-        const body = document.body;
+<!-- ===================== How it works ===================== -->
+<section class="how">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>Written once, in plain text</h2>
+            <p>No database, no build step, no account. A question is a few lines of YAML, and every study mode reads the same file.</p>
+        </div>
 
-        // Function to get preferred theme
-        function getPreferredTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                return savedTheme;
-            }
-            // Check system preference
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        <div class="how-grid">
+            <div>
+<pre class="yaml"><span class="c"># data/unit2-part2-practical.yml</span>
+<span class="k">- id:</span> 3
+  <span class="k">image:</span> <span class="s">"practical-2-2/03.jpg"</span>
+  <span class="k">question:</span> <span class="s">"What is the red vessel?"</span>
+  <span class="k">answer:</span> [<span class="s">"right axillary artery"</span>]
+  <span class="k">definition:</span> <span class="s">"The right subclavian artery
+    becomes the right axillary artery."</span>
+  <span class="k">tags:</span> [<span class="s">"blood-vessels"</span>, <span class="s">"artery"</span>, <span class="s">"vessels-8"</span>]</pre>
+            </div>
+
+            <ul class="how-points">
+                <li>
+                    <strong>Tags do the routing</strong>
+                    <span>The same question lands in a flashcard deck, a four-question quiz, or a full practical depending on how you filter it. You never copy a question twice.</span>
+                </li>
+                <li>
+                    <strong>Answers accept how people actually write</strong>
+                    <span>A question can take several correct phrasings, and near-misses earn partial credit instead of a flat zero &mdash; because "tunica externa" spelled slightly wrong is not the same as not knowing it.</span>
+                </li>
+                <li>
+                    <strong>Runs anywhere static files run</strong>
+                    <span>Vanilla HTML, CSS, and JavaScript on GitHub Pages. It loads on a bad lab connection and costs nothing to host.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== Example course ===================== -->
+<section class="example">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>What it looks like after a semester</h2>
+            <p>The material below was built section by section while actually taking the course &mdash; each unit added as it was taught.</p>
+        </div>
+
+        <a class="example-card" href="course.html">
+            <h3>Anatomy &amp; Physiology II</h3>
+            <p>
+                Four units covering blood and the heart, blood vessels, respiratory and renal
+                systems, and digestive and reproductive anatomy &mdash; with practice exams,
+                lab practicals, flashcard decks, and weekly mini-quizzes for each.
+            </p>
+            <span class="go">Browse the course &rarr;</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap">
+        <p>Built while studying, because making the study materials was the studying.</p>
+        <p style="margin-top:8px"><a href="course.html">Course</a> &middot; <a href="docs/">Docs</a></p>
+    </div>
+</footer>
+
+<script src="js/theme-manager.js"></script>
+<script>
+    ThemeManager.init();
+
+    /* ---------- Flashcard demo ---------- */
+    const fcCards = [
+        {
+            img: 'images/practical-2-2/03.jpg',
+            q: 'What is the red vessel?',
+            a: 'right axillary artery',
+            d: 'The right subclavian artery becomes the right axillary artery.'
+        },
+        {
+            img: 'images/practical-2-2/07.jpg',
+            q: 'What is the large red vessel?',
+            a: 'descending aorta',
+            d: 'Also accepted: thoracic aorta &mdash; this segment sits above the diaphragm.'
+        },
+        {
+            img: 'images/practical-2-2/01.jpg',
+            q: 'Name the middle layer (hint: two word name)',
+            a: 'tunica media',
+            d: 'The smooth muscle and elastic fibre layer. Capillaries and venules do not have one.'
+        }
+    ];
+
+    let fcIndex = 0;
+    const fcFrame = document.getElementById('fc-frame');
+
+    function renderCard() {
+        const c = fcCards[fcIndex];
+        document.getElementById('fc-prompt').textContent = c.q;
+        document.getElementById('fc-img').src = c.img;
+        document.getElementById('fc-answer').textContent = c.a;
+        document.getElementById('fc-def').innerHTML = c.d;
+    }
+
+    function flipCard() {
+        fcFrame.classList.toggle('flipped');
+    }
+
+    fcFrame.addEventListener('click', flipCard);
+    fcFrame.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flipCard(); }
+    });
+
+    document.getElementById('fc-next').addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        fcIndex = (fcIndex + 1) % fcCards.length;
+        // If the card is showing its answer, let it flip back before swapping content
+        const wasFlipped = fcFrame.classList.contains('flipped');
+        fcFrame.classList.remove('flipped');
+        wasFlipped ? setTimeout(renderCard, 280) : renderCard();
+    });
+
+    /* ---------- Mini quiz demo ---------- */
+    const quizAnswers = ['right subclavian artery', 'subclavian artery'];
+    const verdictEl = document.getElementById('quiz-verdict');
+
+    function normalize(s) {
+        return s.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ');
+    }
+
+    function checkQuizAnswer() {
+        const given = normalize(document.getElementById('quiz-input').value);
+        verdictEl.className = 'verdict show';
+
+        if (!given) {
+            verdictEl.classList.add('incorrect');
+            verdictEl.innerHTML = 'Type an answer first.';
+            return;
         }
 
-        // Function to apply theme
-        function applyTheme(theme) {
-            if (theme === 'dark') {
-                body.classList.add('dark-mode');
-                toggleIcon.textContent = '☀️';
-            } else {
-                body.classList.remove('dark-mode');
-                toggleIcon.textContent = '🌙';
-            }
+        if (quizAnswers.some(a => normalize(a) === given)) {
+            verdictEl.classList.add('correct');
+            verdictEl.innerHTML = '<strong>Correct.</strong> Right subclavian artery &mdash; it branches off the brachiocephalic trunk.';
+        } else if (given.includes('subclavian')) {
+            verdictEl.classList.add('partial');
+            verdictEl.innerHTML = '<strong>Partial credit.</strong> The full answer is <em>right subclavian artery</em> &mdash; side matters here.';
+        } else {
+            verdictEl.classList.add('incorrect');
+            verdictEl.innerHTML = '<strong>Not quite.</strong> The answer is <em>right subclavian artery</em>.';
         }
+    }
 
-        // Apply initial theme
-        const currentTheme = getPreferredTheme();
-        applyTheme(currentTheme);
+    document.getElementById('quiz-check').addEventListener('click', checkQuizAnswer);
+    document.getElementById('quiz-input').addEventListener('keydown', e => {
+        if (e.key === 'Enter') checkQuizAnswer();
+    });
 
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            // Only auto-switch if user hasn't set a preference
-            if (!localStorage.getItem('theme')) {
-                applyTheme(e.matches ? 'dark' : 'light');
-            }
+    /* ---------- Multiple choice demo ---------- */
+    const MC_CORRECT = 1;
+    document.querySelectorAll('.mc-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const picked = Number(btn.dataset.i);
+            document.querySelectorAll('.mc-option').forEach(b => {
+                b.disabled = true;
+                if (Number(b.dataset.i) === MC_CORRECT) b.classList.add('is-correct');
+            });
+            if (picked !== MC_CORRECT) btn.classList.add('is-wrong');
+            document.getElementById('mc-hint').textContent =
+                picked === MC_CORRECT ? 'Correct' : 'The correct answer is highlighted';
         });
+    });
+</script>
 
-        // Toggle dark mode
-        darkModeToggle.addEventListener('click', () => {
-            const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
-            applyTheme(newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-
-        // Progress tracking functionality
-        const PROGRESS_KEY = 'courseProgress';
-        const sectionsContainer = document.getElementById('sections-container');
-        const upNextHeading = document.getElementById('up-next-heading');
-
-        // Load progress from localStorage
-        function loadProgress() {
-            const saved = localStorage.getItem(PROGRESS_KEY);
-            return saved ? JSON.parse(saved) : {};
-        }
-
-        // Save progress to localStorage
-        function saveProgress(progress) {
-            localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
-        }
-
-        // Update "Up Next" heading visibility and text
-        function updateUpNextHeading(hasCompleted, allCompleted) {
-            if (allCompleted) {
-                upNextHeading.textContent = 'All done!';
-                upNextHeading.style.display = 'block';
-            } else if (hasCompleted) {
-                upNextHeading.textContent = 'Up Next:';
-                upNextHeading.style.display = 'block';
-            } else {
-                upNextHeading.style.display = 'none';
-            }
-        }
-
-        // Sort sections based on completion status
-        function sortSections() {
-            const sections = Array.from(document.querySelectorAll('.course-section'));
-            const progress = loadProgress();
-
-            // Separate into completed and uncompleted
-            const uncompleted = sections.filter(s => !progress[s.id]);
-            const completed = sections.filter(s => progress[s.id]);
-
-            // Sort each group by data-order
-            const sortByOrder = (a, b) => parseInt(a.dataset.order) - parseInt(b.dataset.order);
-            uncompleted.sort(sortByOrder);
-            completed.sort(sortByOrder);
-
-            // Clear container
-            sectionsContainer.innerHTML = '';
-
-            // Update heading based on completion status
-            const hasCompleted = completed.length > 0;
-            const allCompleted = uncompleted.length === 0 && completed.length > 0;
-            updateUpNextHeading(hasCompleted, allCompleted);
-
-            // Add uncompleted sections
-            uncompleted.forEach(section => {
-                section.classList.remove('completed');
-                sectionsContainer.appendChild(section);
-            });
-
-            // Add separator if there are both completed and uncompleted sections
-            if (completed.length > 0 && uncompleted.length > 0) {
-                const separator = document.createElement('hr');
-                separator.className = 'section-separator';
-                sectionsContainer.appendChild(separator);
-            }
-
-            // Add completed sections
-            completed.forEach(section => {
-                section.classList.add('completed');
-                sectionsContainer.appendChild(section);
-            });
-        }
-
-        // Initialize checkboxes with saved state
-        function initializeCheckboxes() {
-            const progress = loadProgress();
-            const checkboxes = document.querySelectorAll('.section-checkbox');
-
-            checkboxes.forEach(checkbox => {
-                const sectionId = checkbox.id.replace('checkbox-', '');
-                checkbox.checked = progress[sectionId] || false;
-
-                // Add change listener
-                checkbox.addEventListener('change', (e) => {
-                    const progress = loadProgress();
-                    progress[sectionId] = e.target.checked;
-                    saveProgress(progress);
-                    sortSections();
-                });
-            });
-
-            sortSections();
-        }
-
-        // Initialize on page load
-        initializeCheckboxes();
-    </script>
 </body>
 </html>
