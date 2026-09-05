@@ -68,11 +68,11 @@ function updateSocialMetaTags(flashcardSet, flashcards) {
 
     // Pick a random image from flashcards that have images
     const cardsWithImages = flashcards.filter(card => card.image);
-    let imageUrl = 'https://squirrellnonymous.github.io/AP2/images/0.jpg'; // Default fallback
+    let imageUrl = 'https://arena.github.io/study/images/0.jpg'; // Default fallback
 
     if (cardsWithImages.length > 0) {
         const randomCard = cardsWithImages[Math.floor(Math.random() * cardsWithImages.length)];
-        imageUrl = `https://squirrellnonymous.github.io/AP2/images/${randomCard.image}`;
+        imageUrl = `https://arena.github.io/study/images/${randomCard.image}`;
     }
 
     // Update Open Graph tags (check if elements exist first)

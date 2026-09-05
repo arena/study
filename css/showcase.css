@@ -578,7 +578,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   How it works — one source, three modes
+   Durability points — three abreast
    -------------------------------------------------------------------------- */
 
 .how {
@@ -594,23 +594,6 @@ section {
     align-items: center;
 }
 
-pre.yaml {
-    background: #0f172a;
-    color: #e2e8f0;
-    border-radius: var(--radius);
-    padding: 20px 22px;
-    overflow-x: auto;
-    font-size: 0.8rem;
-    line-height: 1.65;
-    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
-    box-shadow: var(--shadow);
-    border: 1px solid #1e293b;
-}
-
-.yaml .k { color: #7dd3fc; }
-.yaml .s { color: #bef264; }
-.yaml .c { color: #64748b; font-style: italic; }
-
 .how-points {
     list-style: none;
     display: flex;
@@ -621,6 +604,13 @@ pre.yaml {
 .how-points li {
     padding-left: 18px;
     border-left: 2px solid var(--border);
+}
+
+/* Three abreast when there's no code block to sit beside. */
+.how-points-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
 }
 
 .how-points strong {
@@ -717,6 +707,13 @@ footer a:hover {
     .how-grid {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .how-points-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 

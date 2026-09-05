@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Writing page (placeholder)
+   Relies on css/showcase.css being linked first for theme tokens, buttons,
+   and the dark-mode toggle.
+   ========================================================================== */
+
+.write-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.write-head h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.write-head p {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   The form
+   -------------------------------------------------------------------------- */
+
+.field {
+    margin-bottom: 22px;
+}
+
+.write-head + form {
+    margin-top: 36px;
+}
+
+.field label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 7px;
+}
+
+.field .help {
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-top: 5px;
+    display: block;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 9px;
+    background: var(--bg-card);
+    color: var(--text);
+    font-size: 1rem;
+    font-family: inherit;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.18s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--text-faint);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.saved-note {
+    font-size: 0.82rem;
+    color: var(--text-faint);
+}
+
+/* --------------------------------------------------------------------------
+   Generated preview
+   -------------------------------------------------------------------------- */
+
+.preview {
+    margin-top: 44px;
+    padding-top: 32px;
+    border-top: 1px dashed var(--border-strong);
+    display: none;
+}
+
+.preview.show {
+    display: block;
+}
+
+.preview h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.preview .sub {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.gen-field {
+    margin-bottom: 16px;
+}
+
+.gen-field label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 5px;
+}
+
+.gen-value {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    padding: 11px 14px;
+    border-radius: 8px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.gen-field.is-yours .gen-value {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--text);
+    font-weight: 500;
+}
+
+.gen-field.is-yours label {
+    color: var(--accent);
+}
+
+.chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    font-size: 0.8rem;
+    margin: 2px 6px 2px 0;
+}
+
+.placeholder-mark {
+    font-style: italic;
+    color: var(--text-faint);
+}
+
+@media (max-width: 640px) {
+    .write-wrap {
+        padding: 56px 18px 72px;
+    }
+
+    .actions .btn {
+        width: 100%;
+    }
+}

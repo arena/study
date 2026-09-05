@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write your first question</title>
+    <meta name="description" content="Start a question bank: write the question and the answer, and the rest gets filled in.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/showcase.css">
+    <link rel="stylesheet" href="css/write.css">
+</head>
+<body>
+
+<button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+    <span class="toggle-icon">🌙</span>
+</button>
+
+<main class="write-wrap">
+    <a href="index.html" class="back-link">&larr; Back</a>
+
+    <div class="write-head">
+        <h1>Write your first question</h1>
+        <p>
+            You write the question and the answer you'd want to give. That's the thinking,
+            and it's the part that teaches you. Everything else is clerical.
+        </p>
+    </div>
+
+    <form id="write-form" autocomplete="off">
+        <div class="field">
+            <label for="q">Question or term</label>
+            <textarea id="q" rows="2" placeholder="What is the red vessel?"></textarea>
+            <span class="help">A question to answer, or just the term you're trying to learn.</span>
+        </div>
+
+        <div class="field">
+            <label for="a">The answer</label>
+            <textarea id="a" rows="2" placeholder="right subclavian artery"></textarea>
+            <span class="help">In your own words. Getting it out of your head is the point.</span>
+        </div>
+
+        <div class="actions">
+            <button type="submit" class="btn btn-primary">Fill in the rest</button>
+            <button type="button" class="btn" id="clear-btn">Clear</button>
+            <span class="saved-note" id="saved-note"></span>
+        </div>
+    </form>
+
+    <section class="preview" id="preview" aria-live="polite">
+        <h2>Here's what would get filled in</h2>
+        <p class="sub">
+            You'd review this and fix what's wrong &mdash; which is studying too, and why
+            that step doesn't get automated away.
+        </p>
+
+        <div class="gen-field is-yours">
+            <label>Question &mdash; yours</label>
+            <div class="gen-value" id="out-q"></div>
+        </div>
+
+        <div class="gen-field is-yours">
+            <label>Answer &mdash; yours</label>
+            <div class="gen-value" id="out-a"></div>
+        </div>
+
+        <div class="gen-field">
+            <label>Other phrasings to accept</label>
+            <div class="gen-value placeholder-mark">Generated once this is wired up &mdash; so a right answer typed a different way still counts.</div>
+        </div>
+
+        <div class="gen-field">
+            <label>Plausible wrong answers</label>
+            <div class="gen-value placeholder-mark">Generated &mdash; near-misses that make a multiple-choice version worth taking.</div>
+        </div>
+
+        <div class="gen-field">
+            <label>Explanation</label>
+            <div class="gen-value placeholder-mark">Drafted &mdash; a first pass at why the answer is what it is, for you to correct.</div>
+        </div>
+
+        <div class="gen-field">
+            <label>Topics</label>
+            <div class="gen-value placeholder-mark">Suggested &mdash; so this question shows up in the right decks and quizzes later.</div>
+        </div>
+    </section>
+</main>
+
+<script src="js/theme-manager.js"></script>
+<script>
+    ThemeManager.init();
+
+    const KEY = 'firstQuestionDraft';
+    const q = document.getElementById('q');
+    const a = document.getElementById('a');
+    const savedNote = document.getElementById('saved-note');
+    const preview = document.getElementById('preview');
+
+    // Restore any draft from a previous visit
+    try {
+        const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
+        if (saved.q) q.value = saved.q;
+        if (saved.a) a.value = saved.a;
+        if (saved.q || saved.a) savedNote.textContent = 'Draft restored';
+    } catch (e) {
+        // A corrupt draft shouldn't take the page down
+    }
+
+    let saveTimer;
+    function saveDraft() {
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(() => {
+            localStorage.setItem(KEY, JSON.stringify({ q: q.value, a: a.value }));
+            savedNote.textContent = 'Saved';
+        }, 400);
+    }
+
+    q.addEventListener('input', saveDraft);
+    a.addEventListener('input', saveDraft);
+
+    document.getElementById('write-form').addEventListener('submit', e => {
+        e.preventDefault();
+        if (!q.value.trim() && !a.value.trim()) {
+            q.focus();
+            return;
+        }
+        document.getElementById('out-q').textContent = q.value.trim() || '(no question yet)';
+        document.getElementById('out-a').textContent = a.value.trim() || '(no answer yet)';
+        preview.classList.add('show');
+        preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('clear-btn').addEventListener('click', () => {
+        q.value = '';
+        a.value = '';
+        localStorage.removeItem(KEY);
+        preview.classList.remove('show');
+        savedNote.textContent = '';
+        q.focus();
+    });
+</script>
+
+</body>
+</html>

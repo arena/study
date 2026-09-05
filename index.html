@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A study engine for memorization-heavy subjects</title>
-    <meta name="description" content="An open study engine for memorization-heavy subjects. One question bank, three ways to drill it: flashcards, mini-quizzes, and full practice exams.">
+    <meta name="description" content="Build your own study material for memorization-heavy subjects. You write the question and the answer; the busywork gets filled in. Then drill it as flashcards, quizzes, or a full practice exam.">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/showcase.css">
 </head>
@@ -18,14 +18,13 @@
 <header class="hero">
     <div class="wrap">
         <span class="eyebrow">Open study</span>
-        <h1>One question bank.<br><strong>Three ways to drill it.</strong></h1>
+        <h1>Crafting study materials<br><strong><i>is studying</i></strong></h1>
         <p class="lede">
-            Anatomy, botany, mineralogy, kanji &mdash; anything you learn by naming things over
-            and over. Write your questions once in plain YAML and the same material becomes
-            flashcards, quick quizzes, and full practice exams.
+            Invest the time to create
+            flashcards, quick quizzes, and full practice exams. Keep yourself inspired and motivated by sharing with others.
         </p>
         <div class="cta-row">
-            <a href="#demo" class="btn btn-primary">See it working</a>
+            <a href="write.html" class="btn btn-primary">Write your first question</a>
             <a href="course.html" class="btn">Browse a real course</a>
         </div>
     </div>
@@ -37,22 +36,13 @@
 <section id="demo">
     <div class="wrap">
         <div class="section-head">
-            <h2>Different ways to study</h2>
+            <h2>Study in different ways</h2>
             <p>
-                Study in short bursts, or sit down and simulate a full-length exam.
-                All three are running on the same question bank &mdash; try them.
+                Short bursts between classes, or sit down and simulate a full-length exam.
             </p>
         </div>
 
-        <!-- Hand-drawn branch: one bank splitting into three modes.
-             Inlined (not <img>) so currentColor follows the theme. -->
-        <div class="branch" aria-hidden="true">
-            <svg viewBox="0 0 971 199" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M462.848 -0.994112C463.949 -1.07811 464.91 -0.253561 464.994 0.847685C469.242 56.5463 466.82 141.187 466.527 171.143L475.814 161.857C476.595 161.077 477.862 161.076 478.643 161.857C479.424 162.638 479.424 163.905 478.643 164.687L465.914 177.414C465.133 178.195 463.867 178.195 463.086 177.414L450.357 164.687C449.577 163.905 449.576 162.638 450.357 161.857C451.138 161.076 452.406 161.076 453.187 161.857L462.528 171.199C462.817 141.143 465.244 56.7214 461.006 1.15237C460.922 0.0510845 461.746 -0.909984 462.848 -0.994112Z" fill="currentColor"/>
-                <path d="M460.675 59C460.675 43.7931 460.756 29.9956 460.837 19.584C460.919 9.15654 460.999 2.15703 460.999 0.5C460.999 -0.604427 461.895 -1.49977 462.999 -1.5C464.104 -1.5 464.999 -0.60457 464.999 0.5C464.999 2.17626 464.918 9.22645 464.837 19.6152C464.756 30.0203 464.675 43.8069 464.675 59C464.675 72.7033 459.391 83.7627 450.082 92.5225C440.833 101.227 427.669 107.611 411.912 112.227C380.406 121.455 337.88 123.792 293.545 122.856C249.168 121.92 202.787 117.699 163.497 113.718C124.111 109.727 92.0331 106 76.0002 106C60.1425 106 49.3305 110.411 41.9358 116.916C34.5129 123.445 30.3308 132.262 28.0852 141.414C24.5686 155.746 25.8675 170.228 26.634 177.573L36.3498 167.857C37.1309 167.077 38.397 167.077 39.178 167.857C39.959 168.638 39.959 169.905 39.178 170.687L26.4504 183.414C25.6694 184.195 24.4024 184.195 23.6213 183.414L10.8938 170.687C10.1128 169.906 10.1129 168.639 10.8938 167.858C11.6748 167.077 12.9409 167.077 13.7219 167.858L22.4973 176.632C21.7331 168.932 20.7807 154.398 24.2004 140.461C26.5708 130.801 31.0677 121.148 39.2942 113.912C47.5489 106.651 59.3582 102 76.0002 102C92.301 102 124.724 105.767 163.901 109.737C203.175 113.717 249.422 117.925 293.629 118.857C337.88 119.791 379.897 117.437 410.788 108.389C426.23 103.866 438.728 97.7147 447.341 89.6094C455.895 81.5593 460.675 71.5346 460.675 59Z" fill="currentColor"/>
-                <path d="M468 59C468 43.7367 467.247 29.894 466.495 19.4561C466.119 14.237 465.743 9.86679 465.462 6.60059C465.174 3.26302 465 1.22089 465 0.5C465 -0.60457 464.104 -1.5 463 -1.5C461.895 -1.4998 461 -0.604447 461 0.5C461 1.44577 461.201 3.74973 461.476 6.94336C461.757 10.2083 462.132 14.5551 462.505 19.7441C463.253 30.1228 464 43.8635 464 59C464 68.9231 466.904 78.1895 473.597 86.4473C480.262 94.6699 490.588 101.777 505.248 107.608C534.525 119.253 581.588 126 653 126C724.932 126 778.746 124.404 819.235 123.105C859.777 121.806 886.822 120.812 905.373 121.996C916.842 122.728 924.955 125.674 930.721 129.833C936.477 133.985 940.044 139.454 942.247 145.497C946.045 155.916 945.739 167.76 945.561 177.229L936.188 167.857C935.407 167.077 934.141 167.077 933.36 167.857C932.579 168.638 932.579 169.905 933.36 170.687L946.087 183.414C946.869 184.195 948.136 184.195 948.917 183.414L961.644 170.687C962.425 169.905 962.425 168.638 961.644 167.857C960.863 167.077 959.597 167.077 958.816 167.857L949.568 177.104C949.755 167.746 950.032 155.174 946.005 144.128C943.583 137.484 939.586 131.296 933.061 126.589C926.546 121.889 917.658 118.772 905.628 118.004C886.831 116.804 859.527 117.811 819.106 119.107C778.633 120.405 724.869 122 653 122C581.711 122 535.274 115.247 506.726 103.892C492.474 98.2227 482.806 91.4549 476.705 83.9277C470.632 76.4356 468 68.0767 468 59Z" fill="currentColor"/>
-            </svg>
-        </div>
+        
 
         <div class="mode-grid">
 
@@ -149,37 +139,24 @@
 <section class="how">
     <div class="wrap">
         <div class="section-head">
-            <h2>Written once, in plain text</h2>
-            <p>No database, no build step, no account. A question is a few lines of YAML, and every study mode reads the same file.</p>
+            <h2>Your material stays yours</h2>
+            <p>Nothing to learn before you start, and nothing to lose when the class ends.</p>
         </div>
 
-        <div class="how-grid">
-            <div>
-<pre class="yaml"><span class="c"># data/unit2-part2-practical.yml</span>
-<span class="k">- id:</span> 3
-  <span class="k">image:</span> <span class="s">"practical-2-2/03.jpg"</span>
-  <span class="k">question:</span> <span class="s">"What is the red vessel?"</span>
-  <span class="k">answer:</span> [<span class="s">"right axillary artery"</span>]
-  <span class="k">definition:</span> <span class="s">"The right subclavian artery
-    becomes the right axillary artery."</span>
-  <span class="k">tags:</span> [<span class="s">"blood-vessels"</span>, <span class="s">"artery"</span>, <span class="s">"vessels-8"</span>]</pre>
-            </div>
-
-            <ul class="how-points">
-                <li>
-                    <strong>Tags do the routing</strong>
-                    <span>The same question lands in a flashcard deck, a four-question quiz, or a full practical depending on how you filter it. You never copy a question twice.</span>
-                </li>
-                <li>
-                    <strong>Answers accept how people actually write</strong>
-                    <span>A question can take several correct phrasings, and near-misses earn partial credit instead of a flat zero &mdash; because "tunica externa" spelled slightly wrong is not the same as not knowing it.</span>
-                </li>
-                <li>
-                    <strong>Runs anywhere static files run</strong>
-                    <span>Vanilla HTML, CSS, and JavaScript on GitHub Pages. It loads on a bad lab connection and costs nothing to host.</span>
-                </li>
-            </ul>
-        </div>
+        <ul class="how-points how-points-row">
+            <li>
+                <strong>Plain files, not a database</strong>
+                <span>Export it, back it up, hand it to next year's class. You still have it after the semester ends, in a format anything can read.</span>
+            </li>
+            <li>
+                <strong>Works on a phone, on bad lab wifi</strong>
+                <span>No app to install, no account to make. It loads over a weak connection and costs nothing to host.</span>
+            </li>
+            <li>
+                <strong>Answers accept how people actually write</strong>
+                <span>A question can take several correct phrasings, and near-misses earn partial credit &mdash; because "tunica externa" spelled slightly wrong is not the same as not knowing it.</span>
+            </li>
+        </ul>
     </div>
 </section>
 
@@ -188,7 +165,7 @@
     <div class="wrap">
         <div class="section-head">
             <h2>What it looks like after a semester</h2>
-            <p>The material below was built section by section while actually taking the course &mdash; each unit added as it was taught.</p>
+            <p>Built one section at a time while actually taking the course &mdash; each unit added the week it was taught.</p>
         </div>
 
         <a class="example-card" href="course.html">
